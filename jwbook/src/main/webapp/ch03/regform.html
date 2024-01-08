@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1" />
+		<!-- 브라우저의 호환성 보기 모드를 막고, 해당 브라우저에서 지원하는 가장 최신 버전의 방식으로 HTML 보여주도록 설정.-->
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no" />
+		<!--viewport : 화면에 보이는 영역을 제어하는 기술. width는 device-width로 설정(브라우저 너비를 장치 너비에 맞추어 표시). initial-scale는 초기비율(보이는 영역과 웹 페이지를 맞춤). user-scalable는 사용자가 화면축소를 하지 못하도록 설정.-->
+		<title>Insert title here</title>
+		
+		<!-- 모바일 웹 페이지 설정 -->
+		<link rel="shortcut icon" href="../image/icon.png" />
+		<link rel="apple-touch-icon" href="../image/icon.png" />
+		<!-- 모바일 웹 페이지 설정 끝 -->
+		
+		<style>
+		h2 {
+			border-radius: 5px;
+			background-color: wheat;
+			text-align : center;
+			padding: 15px 0;
+		}
+		
+		#regform {
+			padding: 15px 20px;
+			border-radius: 10px;
+			margin : auto;
+			width: 50%;
+			background-color: SandyBrown;
+		}
+		
+		</style>
+		<script>
+			function signUp() {
+				alert("정말로 가입히시겠습니까?");
+				document.getElementById("regform").style.display = "none";
+				document.getElementById("rname").innerHTML = document.form1.name.value;
+				document.getElementById("remail").innerHTML = document.form1.email.value;
+				document.getElementById("result").setAttribute("style","display: block; background-color:Khaki;");
+			}
+		
+		</script>
+		
+	</head>
+<body>
+	<h2>회원가입</h2>
+	<hr>
+	<div id="regform">
+		<form name = "form1">
+			<label>이름</label><br>
+			<input type = "text" name="name" size="40"><br>
+			<hr>
+			<label>이메일</label><br>
+			<input type="email" name="email" size="40"><br>
+			<button type = "button" onClick="signUp()">가입</button>		
+		</form>
+	</div>
+	<div id = "result" class="result">
+		<h3>가입 정보</h3>
+		<hr>
+		이름 : <span id ="rname"></span><br>
+		이메일 : <span id = "remail"></span></br>
+	</div>
+	
+	<script>
+		document.getElementById("result").style.display = "none";
+	</script>
+</body>
+</html>
